@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;900&family=Londrina+Solid:wght@300;900&family=Mada:wght@200;400;500;900&display=swap');
+@import '_variables.scss';
+@import '_mixins.scss';
+body {}
+
+.wrapper {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 6em;
+    font-family: $poppins;
+    background-color: #fff;
+    padding: 3em;
+}
+
+.form {
+    &-header {
+        @include setFlex (flex,
+        center,
+        space-between,
+        initial);
+        .logo {
+            @include setFlex (flex,
+            center,
+            space-between,
+            initial);
+            &-circle {
+                height: 3em;
+                width: 3em;
+                display: block;
+                background-color: $blue_bg;
+                border-radius: 50%
+            }
+            h1 {
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-left: .6em;
+                color: $text_one;
+                .lean {
+                    font-weight: 300;
+                }
+            }
+        }
+        .timer {
+            font-size: 1.35em;
+            font-weight: 500;
+            &-box {
+                background-color: $dark_bg;
+                color: #fff;
+                height: 1.9em;
+                width: 1.3em;
+                display: inline-flex;
+                @include setFlex (inline-flex,
+                center,
+                center,
+                initial);
+                border-radius: 4px;
+                margin-left: -4px;
+            }
+            &-divider {
+                position: relative;
+                right: 2px;
+            }
+        }
+    }
+}

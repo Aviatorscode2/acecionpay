@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;900&family=Londrina+Solid:wght@300;900&family=Mada:wght@200;400;500;900&display=swap");
+.wrapper {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 6em;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  padding: 3em;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-header .logo-circle {
+  height: 3em;
+  width: 3em;
+  display: block;
+  background-color: #035fff;
+  border-radius: 50%;
+}
+.form-header .logo h1 {
+  font-size: 1.75em;
+  font-weight: 600;
+  margin-left: 0.6em;
+  color: #05365c;
+}
+.form-header .logo h1 .lean {
+  font-weight: 300;
+}
+.form-header .timer {
+  font-size: 1.35em;
+  font-weight: 500;
+}
+.form-header .timer-box {
+  background-color: #17254c;
+  color: #fff;
+  height: 1.9em;
+  width: 1.3em;
+  display: inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: initial;
+  border-radius: 4px;
+  margin-left: -4px;
+}
+.form-header .timer-divider {
+  position: relative;
+  right: 2px;
+}
+
+/*# sourceMappingURL=main.css.map */
