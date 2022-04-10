@@ -1,66 +1,456 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;900&family=Londrina+Solid:wght@300;900&family=Mada:wght@200;400;500;900&display=swap');
-@import '_variables.scss';
-@import '_mixins.scss';
-body {}
-
-.wrapper {
-    max-width: 1200px;
-    position: relative;
-    margin: 0 auto;
-    padding-top: 6em;
-    font-family: $poppins;
-    background-color: #fff;
-    padding: 3em;
-}
-
-.form {
-    &-header {
-        @include setFlex (flex,
-        center,
-        space-between,
-        initial);
-        .logo {
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;900&family=Londrina+Solid:wght@300;900&family=Mada:wght@200;400;500;900&display=swap');
+    @import '_variables.scss';
+    @import '_mixins.scss';
+    body {
+        background: url('../assets/bg.jpg');
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    
+    .wrapper {
+        max-width: 1200px;
+        position: relative;
+        margin: 0 auto;
+        font-family: $poppins;
+        background-color: #fff;
+        padding: 6em 3em 3em 3em;
+        margin-top: 6em;
+        .close-btn {
+            position: absolute;
+            z-index: 99;
+            top: 16px;
+            right: 16px;
+            svg {
+                height: 1.5em;
+            }
+        }
+    }
+    
+    .form {
+        &-header {
             @include setFlex (flex,
             center,
             space-between,
             initial);
-            &-circle {
-                height: 3em;
-                width: 3em;
-                display: block;
-                background-color: $blue_bg;
-                border-radius: 50%
+            margin-bottom: 5em;
+            .logo {
+                @include setFlex (flex,
+                center,
+                space-between,
+                initial);
+                &-circle {
+                    height: 3em;
+                    width: 3em;
+                    display: block;
+                    background-color: $blue_bg;
+                    border-radius: 50%
+                }
+                h1 {
+                    font-size: 1.75em;
+                    font-weight: 600;
+                    margin-left: .6em;
+                    color: $text_one;
+                    .lean {
+                        font-weight: 300;
+                    }
+                }
             }
-            h1 {
-                font-size: 1.75em;
-                font-weight: 600;
-                margin-left: .6em;
-                color: $text_one;
-                .lean {
-                    font-weight: 300;
+            .timer {
+                font-size: 1.35em;
+                font-weight: 500;
+                &-box {
+                    background-color: $dark_bg;
+                    color: #fff;
+                    height: 1.9em;
+                    width: 1.3em;
+                    display: inline-flex;
+                    @include setFlex (inline-flex,
+                    center,
+                    center,
+                    initial);
+                    border-radius: 4px;
+                    margin-left: -4px;
+                }
+                &-divider {
+                    position: relative;
+                    right: 2px;
                 }
             }
         }
-        .timer {
-            font-size: 1.35em;
-            font-weight: 500;
-            &-box {
-                background-color: $dark_bg;
-                color: #fff;
-                height: 1.9em;
-                width: 1.3em;
-                display: inline-flex;
-                @include setFlex (inline-flex,
-                center,
-                center,
-                initial);
-                border-radius: 4px;
-                margin-left: -4px;
-            }
-            &-divider {
-                position: relative;
-                right: 2px;
+        &-body {
+            form {
+                .input-group {
+                    margin-bottom: 2em;
+                    .header {
+                        @include setFlex (flex,
+                        center,
+                        space-between,
+                        initial);
+                        margin-bottom: 5em;
+                        .description {
+                            .title {
+                                text-transform: capitalize;
+                                font-size: 1.1em;
+                                font-weight: 700;
+                                color: $text_one;
+                                margin-bottom: .4em;
+                            }
+                            .desc {
+                                font-size: .77em;
+                                font-weight: 500;
+                                color: $text_two;
+                            }
+                        }
+                        button.edit {
+                            @include setFlex (flex,
+                            center,
+                            space-between,
+                            initial);
+                            color: $blue_bg;
+                            svg {
+                                fill: $blue_bg;
+                                height: .9em;
+                            }
+                            .btn-desc {
+                                display: block;
+                                margin-left: .6em;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .main {
+                        position: relative;
+                        margin-top: 1em;
+                        img {
+                            position: absolute;
+                            &.leading-icon {
+                                left: 1.2em;
+                                height: 2em;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                            }
+                            &.trailing-icon {
+                                right: 1.2em;
+                                height: 1.5em;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                            }
+                        }
+                        input {
+                            width: 100%;
+                            border-radius: 6px;
+                            border: 2px solid $input_border;
+                            padding: 1em 4em;
+                            padding-left: 4.5em;
+                            font-size: 1.1em;
+                            font-weight: 600;
+                            outline-color: $active_border;
+                            background: linear-gradient(45deg, #f8faf9, transparent);
+                            &::placeholder {
+                                font-weight: 400;
+                                opacity: .5;
+                            }
+                        }
+                    }
+                    &.__col {
+                        @include setFlex (flex,
+                        center,
+                        space-between,
+                        initial);
+                        .header {
+                            margin-bottom: 0;
+                        }
+                        .grp {
+                            @include setFlex (flex,
+                            center,
+                            space-between,
+                            initial);
+                            width: 400px;
+                            .divider {
+                                display: block;
+                                margin: 0 .8em;
+                                font-size: 1.2em;
+                                font-weight: 800;
+                                color: $text_one;
+                            }
+                        }
+                        .main {
+                            width: 400px;
+                            margin-top: 0;
+                            input {
+                                text-align: center;
+                                padding-right: 0em;
+                                padding-left: 0em;
+                                background: none;
+                                color: $active_border;
+                                &:focus {
+                                    background: #edf3ff;
+                                }
+                            }
+                            input[type="password"] {
+                                text-align: left;
+                                padding-left: 1.5em;
+                                letter-spacing: .3em;
+                            }
+                            .trailing-icon {
+                                opacity: .35;
+                            }
+                        }
+                    }
+                }
+                .btn-submit {
+                    background-color: $blue_bg;
+                    width: 100%;
+                    padding: 1.2em 0;
+                    color: #fff;
+                    text-transform: capitalize;
+                    border-radius: .6em;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                    transition: all 250ms ease-in-out;
+                    &:hover {
+                        background-color: #0645b2;
+                    }
+                }
             }
         }
     }
-}
+    
+    .checkout {
+        position: relative;
+        height: 100%;
+        width: 90%;
+        float: right;
+        .blue {
+            display: block;
+            height: 1.5em;
+            width: 5em;
+            background-color: $blue_bg;
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        .credit-card {
+            width: 16em;
+            height: 23.4em;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), #fff);
+            padding: 2em;
+            border-radius: 1em;
+            box-shadow: 0px 4px 14px 2px rgb(142 142 142 / 15%);
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            overflow: hidden;
+            z-index: 99;
+            backdrop-filter: blur(15px);
+            &_head {
+                position: relative;
+                @include setFlex (flex,
+                center,
+                space-between,
+                initial);
+                margin-bottom: 8em;
+                img {
+                    height: 1.8em;
+                }
+                .chip {
+                    height: 3.2em;
+                }
+            }
+            &_body {
+                position: relative;
+                color: $text_one;
+                span {
+                    display: block;
+                }
+                .holder {
+                    text-transform: capitalize;
+                    font-size: .95em;
+                    font-weight: 600;
+                    margin-bottom: .5em;
+                    color: $text_one;
+                }
+                .card-digits {
+                    display: flex;
+                    margin-bottom: .5em;
+                    .hidden-digits {
+                        @include setFlex (flex,
+                        center,
+                        initial,
+                        initial);
+                        .circle {
+                            height: 0.4em;
+                            width: 0.4em;
+                            border-radius: 50%;
+                            background-color: $dark_bg;
+                            margin-right: .4em;
+                        }
+                    }
+                    .visible-digits {
+                        font-size: 1.1em;
+                        font-weight: 700;
+                        margin-left: .8em;
+                    }
+                }
+            }
+            &_footer {
+                @include setFlex (flex,
+                center,
+                space-between,
+                initial);
+                position: relative;
+                top: 1.4em;
+                .expiry {
+                    font-size: 1em;
+                    font-weight: 600;
+                }
+                .logo {
+                    height: 2.5em;
+                }
+            }
+            .card__design {
+                width: 700px;
+                height: 700px;
+                border: 1px solid #0645b2;
+                border-radius: 50%;
+                @include setFlex (flex,
+                center,
+                center,
+                initial);
+                top: 3.5em;
+                position: absolute;
+                left: -6em;
+                z-index: -1;
+                .inner {
+                    display: inline-block;
+                    width: 570px;
+                    height: 570px;
+                    border-radius: inherit;
+                    border: inherit;
+                }
+            }
+        }
+    }
+    
+    .checkout-details {
+        background-color: #f0f3f8;
+        height: 82%;
+        width: 100%;
+        border-radius: 1em;
+        position: absolute;
+        bottom: 0;
+        .purchase-data {
+            position: relative;
+            top: 15.5em;
+            padding: 2em;
+            .data {
+                @include setFlex (flex,
+                center,
+                space-between,
+                initial);
+                .data-item {
+                    @include setFlex (flex,
+                    center,
+                    space-between,
+                    initial);
+                    text-transform: capitalize;
+                    font-size: 1em;
+                    color: $text_two;
+                    margin-bottom: .7em;
+                    .title {
+                        font-size: .85em;
+                        font-weight: 500;
+                    }
+                    .value {
+                        @include setFlex (flex,
+                        center,
+                        space-between,
+                        initial);
+                        img {
+                            height: 1.5em;
+                        }
+                        .inner-text {
+                            color: $text_one;
+                            font-weight: 700;
+                            margin-left: .6em;
+                        }
+                    }
+                }
+            }
+        }
+        .divider {
+            position: absolute;
+            bottom: 6.4em;
+            width: 100%;
+            border-top: 4px dashed #d3d3d3;
+            display: flex;
+            align-items: center;
+            .left,
+            .right {
+                position: absolute;
+                height: 2.65em;
+                width: 2.65em;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+            .left {
+                left: -25px;
+            }
+            .right {
+                right: -25px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2em;
+                background-color: #f0f3f8;
+                bottom: -30px;
+            }
+        }
+        .purchase-total {
+            position: absolute;
+            bottom: 1.4em;
+            width: 100%;
+            padding: 0 2em;
+            @include setFlex (flex,
+            center,
+            space-between,
+            initial);
+            .total {
+                .desc {
+                    color: #8e96a3;
+                    font-size: .9em;
+                    font-weight: 500;
+                }
+                .t-amount {
+                    @include setFlex (flex,
+                    center,
+                    initial,
+                    initial);
+                    color: $text_one;
+                    .amount {
+                        font-size: 2em;
+                        font-weight: 700;
+                        sub {
+                            position: relative;
+                            font-size: .6em;
+                            bottom: 1px;
+                            font-weight: 600;
+                        }
+                    }
+                    .symbol {
+                        position: relative;
+                        font-size: 1.1em;
+                        top: 4px;
+                        margin-left: .2em;
+                        color: #8e96a3;
+                    }
+                }
+            }
+            img {
+                height: 1.6em;
+            }
+        }
+    }

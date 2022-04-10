@@ -13,6 +13,9 @@
 <body>
 
     <div class="wrapper grid grid-cols-12">
+        <button class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Close</title><path d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"/></svg>
+        </button>
         <div class="col-span-12 md:col-span-8">
             <div class="form">
                 <header class="form-header">
@@ -53,13 +56,135 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    <span class="btn"></span>
+                                    <span class="btn">Edit</span>
                                 </button>
                             </div>
+                            <div class="main">
+                                <img src="assets/mc_symbol.svg" alt="mastercard" class="leading-icon">
+                                <input type="text" class="input-field" placeholder="0000     -     0000     -     0000     -     0000">
+                                <img src="assets/verified-badge.svg" alt="verified" class="trailing-icon">
+                            </div>
                         </div>
+                        <div class="input-group __col">
+                            <div class="header">
+                                <div class="description">
+                                    <h2 class="title">CVV number</h2>
+                                    <p class="desc">Enter your CVV number</p>
+                                </div>
+                            </div>
+                            <div class="main">
+                                <input type="text" class="input-field" placeholder="734">
+                                <img src="assets/dots.svg" alt="verified" class="trailing-icon">
+                            </div>
+                        </div>
+                        <div class="input-group __col">
+                            <div class="header">
+                                <div class="description">
+                                    <h2 class="title">expiry date</h2>
+                                    <p class="desc">Enter your card expiration date</p>
+                                </div>
+                            </div>
+                            <div class="grp">
+                                <div class="main">
+                                    <input type="text" class="input-field" placeholder="07">
+                                </div>
+                                <span class="divider">/</span>
+                                <div class="main">
+                                    <input type="text" class="input-field" placeholder="22">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="input-group __col">
+                            <div class="header">
+                                <div class="description">
+                                    <h2 class="title">password</h2>
+                                    <p class="desc">Enter your password</p>
+                                </div>
+                            </div>
+                            <div class="main">
+                                <input type="password" class="input-field" placeholder="******">
+                                <img src="assets/dots.svg" alt="verified" class="trailing-icon">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">Pay Now</button>
                     </form>
                 </section>
             </div>
+        </div>
+        <div class="col-span-12 md:col-span-4">
+            <div class="checkout">
+                <span class="blue"></span>
+                <div class="credit-card">
+                    <div class="credit-card_head">
+                        <img src="assets/chip.png" alt="chip" class="chip">
+                        <img src="assets/wifi.png" alt="wifi">
+                    </div>
+                    <div class="credit-card_body">
+                        <span class="holder">Bunzi Aleobua</span>
+                        <div class="card-digits">
+                            <div class="hidden-digits">
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                            </div>
+                            <span class="visible-digits">3475</span>
+                        </div>
+                    </div>
+                    <div class="credit-card_footer">
+                        <span class="expiry">07/22</span>
+                        <img src="assets/mastercard-2.svg" alt="mastercard" class="logo">
+                    </div>
+                    <div class="card__design">
+                        <span class="inner"></span>
+                    </div>
+                </div>
+                <div class="checkout-details">
+                    <div class="purchase-data">
+                        <div class="data">
+                            <span class="title">Company</span>
+                            <span class="value">
+                                <img src="assets/apple-13.svg" alt="apple">
+                                <span class="inner-text">Apple</span>
+                            </span>
+                        </div>
+                        <div class="data">
+                            <span class="title">Other Number</span>
+                            <span class="value">
+                                <span class="inner-text">123456</span>
+                            </span>
+                        </div>
+                        <div class="data">
+                            <span class="title">Product</span>
+                            <span class="value">
+                                <span class="inner-text">macbook air</span>
+                            </span>
+                        </div>
+                        <div class="data">
+                            <span class="title">WAT (200%)</span>
+                            <span class="value">
+                                <span class="inner-text">$100.00</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="divider">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="purchase-total">
+                        <div class="total">
+                            <span class="desc">You have to Pay</span>
+                            <div class="t-amount">
+                                <h1 class="amount">549 <sub>.99</sub></h1>
+                                <span class="symbol">USD</span>
+                            </div>
+                        </div>
+                        <img src="assets/docket.png" alt="docket">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
