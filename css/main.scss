@@ -43,7 +43,10 @@
                     width: 3em;
                     display: block;
                     background-color: $blue_bg;
-                    border-radius: 50%
+                    border-radius: 50%;
+                    align-items: center;
+                    align-content: center;
+                    padding: 0.5em;
                 }
                 h1 {
                     font-size: 1.75em;
@@ -368,7 +371,7 @@
                         space-between,
                         initial);
                         img {
-                            height: 1.5em;
+                            // height: .5em;
                         }
                         .inner-text {
                             color: $text_one;

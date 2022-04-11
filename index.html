@@ -8,6 +8,7 @@
     <title>AceCoinPay</title>
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
                     </div>
                 </header>
                 <section class="form-body">
-                    <form action="">
+                    <form action="/" method="GET">
                         <div class="input-group">
                             <div class="header">
                                 <div class="description">
@@ -56,12 +57,12 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    <span class="btn">Edit</span>
+                                    <span class="btn-desc">Edit</span>
                                 </button>
                             </div>
                             <div class="main">
                                 <img src="assets/mc_symbol.svg" alt="mastercard" class="leading-icon">
-                                <input type="text" class="input-field" placeholder="0000     -     0000     -     0000     -     0000">
+                                <input type="text" class="input-field" required placeholder="0000     -     0000     -     0000     -     0000">
                                 <img src="assets/verified-badge.svg" alt="verified" class="trailing-icon">
                             </div>
                         </div>
@@ -73,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="main">
-                                <input type="text" class="input-field" placeholder="734">
+                                <input type="text" class="input-field" required placeholder="734">
                                 <img src="assets/dots.svg" alt="verified" class="trailing-icon">
                             </div>
                         </div>
@@ -86,11 +87,11 @@
                             </div>
                             <div class="grp">
                                 <div class="main">
-                                    <input type="text" class="input-field" placeholder="07">
+                                    <input type="text" class="input-field" required placeholder="07">
                                 </div>
                                 <span class="divider">/</span>
                                 <div class="main">
-                                    <input type="text" class="input-field" placeholder="22">
+                                    <input type="text" class="input-field" required placeholder="22">
                                 </div>
                             </div>
 
@@ -103,7 +104,7 @@
                                 </div>
                             </div>
                             <div class="main">
-                                <input type="password" class="input-field" placeholder="******">
+                                <input type="password" class="input-field" required placeholder="******">
                                 <img src="assets/dots.svg" alt="verified" class="trailing-icon">
                             </div>
                         </div>
